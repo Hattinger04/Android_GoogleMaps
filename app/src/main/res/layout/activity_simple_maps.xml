@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500pt"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:context=".googlemaps.SimpleMapsActivity" />
+
+    <TextView
+        android:id="@+id/feedback"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="175dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/IDText"
+        android:layout_width="171dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="20dp"
+        android:hint="ID"
+        android:inputType="numberDecimal"
+        android:paddingHorizontal="5pt"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonGET"
+        app:layout_constraintEnd_toStartOf="@+id/feedback"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonGET"
+        android:layout_width="173dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="2dp"
+        android:onClick="getRequest"
+        android:text="GET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/feedback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
